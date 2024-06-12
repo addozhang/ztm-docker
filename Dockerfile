@@ -9,9 +9,6 @@ RUN curl -sL https://github.com/flomesh-io/ztm/releases/download/v${ZTM_VERSION}
 
 FROM debian:12-slim
 
-ARG ZTM_VERSION
-
-ENV ZTM_VERSION=${ZTM_VERSION}
 ENV LISTEN=127.0.0.1:7777
 ENV DATABASE=/home/ztm/.ztm.db
 
