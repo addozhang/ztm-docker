@@ -9,6 +9,7 @@ on:
       ZTM_VERSION:
         description: 'Version of ZTM'
         required: true
+        default: '0.0.3'
 
 jobs:
   build:
