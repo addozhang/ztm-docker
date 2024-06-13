@@ -40,4 +40,13 @@ jobs:
           tags: addozhang/ztm:${{ env.ZTM_VERSION }}
           build-args: |
             ZTM_VERSION=${{ env.ZTM_VERSION }}
+            
+      - name: Save Docker image to tar file
+        run: docker save addozhang/ztm:${{ env.ZTM_VERSION }} -o ztm_${{ env.ZTM_VERSION }}.tar
+
+      - name: Upload Docker image tar file
+        uses: actions/upload-artifact@v3
+        with:
+          name: ztm_${{ env.ZTM_VERSION }}.tar
+          path: ztm_${{ env.ZTM_VERSION }}.tar
 
