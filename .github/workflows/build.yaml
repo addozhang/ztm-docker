@@ -60,7 +60,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           tag_name: v${{ env.ZTM_VERSION }}
-          release_name: Release v${{ env.ZTM_VERSION }}
+          release_name: v${{ env.ZTM_VERSION }}
           draft: false
           prerelease: false
 
