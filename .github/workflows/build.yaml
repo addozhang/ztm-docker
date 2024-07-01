@@ -55,7 +55,7 @@ jobs:
           path: ztm_${{ env.ZTM_VERSION }}_amd64.tar
 
       - name: Pull the Docker image for arm64
-        run: docker pull addozhang/ztm:${{ env.ZTM_VERSION }} --platform 
+        run: docker pull addozhang/ztm:${{ env.ZTM_VERSION }} --platform arm64
 
       - name: Save Docker image to tar file for arm64
         run: docker save addozhang/ztm:${{ env.ZTM_VERSION }} -o ztm_${{ env.ZTM_VERSION }}_arm64.tar
