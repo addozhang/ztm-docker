@@ -28,4 +28,4 @@ USER ztm
 
 # Entrypoint to start the services
 ENTRYPOINT ["/usr/local/bin/ztm"]
-CMD ["run", "agent", "--database", "/home/ztm/.ztm-ca.db"]
+CMD ["run", "agent", "--data", "/home/ztm/.ztm-ca.db"]
